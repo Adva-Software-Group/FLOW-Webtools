@@ -1,41 +1,44 @@
 # Flow Webtools
 
+Flow Webtools is a CSS framework that provides a set of features that make it easy to create beautiful websites within a set timespan.
+
+
+## Getting Started
 
 To use Flow Webtools,
 you have a multitude of options - 
 
-``` main.min.css ```
+``` main.min.css ``` - DO NOT USE; This is not very updated, better to use main.css instead.
 
-``` main.css ```
+``` main.css ``` - Non minified CSS code for Webtools.
 
-You also have Sass tools to utilise - 
+There is also a SASS version of Flow - 
 
 ``` main.scss ```
 
+The sass version is the recommended version as it allows for extended customisation of styles.
 
 #
-### Some things need JS, in the JS folder - 
+
+
+## Javascript Utilities
+
+Javascript utilities are useful for more advanced kinds of elements - such as a 'rotary menu'. It is a doughnut-shaped radial menu that can be used for navigation or some form of interaction. Currently it is not recommended for use.
 ```
 rotarymenu.js
 ```
 
 
-#
 
-You have Montserrat fonts attached to use for your projects, as the default font
-
-```
-Montserat Included
-```
-
-
-#
 
 ## Info
+You have Montserrat fonts attached to use for your projects, as the default font.
 
 You can redistribute these documents, crediting the authors, however you cannot modify any content without permission or change the name 'FLOW WEBTOOLS'.
 
 #
+
+
 
 ## Notice - Font 'Montserrat'
 The font Montserrat included in this set of documents was not created by me, but by
