@@ -1,3 +1,36 @@
+
+/* Hello there! Thank you for using FLOW Webtools. First, before you get started, we have to set up your color theme. Adjust colours, transitions, parameters, etc. here to your likings.
+
+Now, FLOW comes with 2 main styles: dark and light.
+
+Dark is set by default.
+
+To change the style, you have to either
+
+a - comment out the light/dark mode variables so that only the desired style's variables are being used.
+
+or
+
+b - duplicate this file and name one file dark, and the other light.
+In each file, comment out the light/dark mode variables so that only the desired style's variables are being used.
+
+
+
+Now, some things have to have their style manually set through classes applied to the element, such as vnav bars and topbars. This is for customisation purposes.
+
+Lastly, if you are using topbar, configure your highlight colour and thickness below.
+(hover style for links on the topbar)
+*/
+$navbar-thickness: 3px;
+$navbar-highlight-theme-color: #ffffff;
+$navbar-roundness: 3rem;
+// ! IF YOU HAVENT ALREADY, PLEASE READ THE ABOVE.
+
+
+
+
+
+
 $caeruleus: #0781ff;
 $recte: #e93d3d;
 $lux-viridus: #acf06d;
@@ -24,32 +57,35 @@ $font-regular: 500;
 $container-max-width: 1100px;
 
 
-// Two Modes
+// ? Two Modes - Comment one out.
 
-// Light Mode
-$white: #eee;
-$white-grey: #ddd;
-$card-grey: #eee;
-$font-main-color: #222;
-$border-color: #ddd;
-$mode: #fff;
-$highlight: rgba($caeruleus, 0.6);
-$dark: #222;
-$light: #eee;
-*::-webkit-scrollbar-track {
-    background: $mode;
-}
-*::-webkit-scrollbar-thumb {
-    background: rgba(51, 51, 51, 0.7);
-    border-radius: 20px;
-    height: 20px;
-    border: 3px $mode solid;
-    transition: 0.2s cubic-bezier(0.98, 0.01, 0.54, 1);
-}
+// ! Light Mode - Uncomment this for light mode, and comment out the dark mode.
 
 
+// $white: #eee;
+// $white-grey: #ddd;
+// $card-grey: #eee;
+// $font-main-color: #222;
+// $border-color: #ddd;
+// $mode: #fff;
+// $highlight: rgba($caeruleus, 0.6);
+// $dark: #222;
+// $light: #eee;
 
-// Dark Mode
+// *::-webkit-scrollbar-track {
+//     background: $mode;
+// }
+// *::-webkit-scrollbar-thumb {
+//     background: rgba(51, 51, 51, 0.7);
+//     border-radius: 20px;
+//     height: 20px;
+//     border: 3px $mode solid;
+//     transition: 0.2s cubic-bezier(0.98, 0.01, 0.54, 1);
+// }
+// ! End of Light Mode
+
+
+// ! Dark Mode - Default style. This style overrides light mode, which is currently commented out. To enable light mode, comment this out.
 $white: #fff;
 $white-grey: #ddd;
 $card-grey: #444;
@@ -57,7 +93,10 @@ $font-main-color: #fff;
 $border-color: #555;
 $dark: #333;
 $mode: #222;
+$light: #eee;
 $highlight: rgba(#2eafff, 0.6);
+
+
 *::-webkit-scrollbar-track {
     background: $mode;
 }
@@ -68,7 +107,7 @@ $highlight: rgba(#2eafff, 0.6);
     border: 3px $mode solid;
     transition: 0.2s cubic-bezier(0.98, 0.01, 0.54, 1);
 }
-
+// ! End of Dark Mode
 
 
 
@@ -76,6 +115,8 @@ $highlight: rgba(#2eafff, 0.6);
 $highlight-full: 0px 0px 0px 3px $highlight;
 $highlight-full-pars: 0px 0px 0px 3px;
 $transition: all 300ms ease-in-out;
+$transition-font-size: font-size 10ms ease-in-out;
+$transition-textcolor: color 300ms ease-in-out;
 $transition-quick: all 200ms ease-in-out;
 $transition-quick-select: 200ms ease-in-out;
 
@@ -115,7 +156,7 @@ body {
 }
 
 
-
+// ? Beginning of styling section
 
 // Colors
 
@@ -1768,6 +1809,7 @@ a {
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        position: relative;
         &:hover {
             transition: $transition;
             div {
@@ -1777,6 +1819,7 @@ a {
                         i {
                             transition: $transition;
                             color: $white;
+                            z-index: 10;
                         }
                         li {
                             transition: $transition;
@@ -1786,6 +1829,10 @@ a {
                     li {
                         transition: $transition;
                         display: initial;
+                        margin: 0.6rem;
+                        transform: translateX(0);
+                        font-size: initial;
+                        color: $white-grey - #444;
                         padding-left: 0;
                     }
                 }
@@ -1837,13 +1884,23 @@ a {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            
             li {
                 list-style: none;
-                margin: 0.6rem;
+                margin: 0.0rem;
                 border-radius: 7px;
                 cursor: pointer;
-                display: none;
+                display: initial;
+                transform: translateX(-100rem);
+                
+                font-size: 0;
+                color: transparent;
                 transition: $transition;
+                position: relative;
+                right: 0;
+                
+                
+
             }
             i {
                 transition: $transition;
@@ -1860,6 +1917,7 @@ a {
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        position: relative;
         &:hover {
             transition: $transition;
             div {
@@ -1869,6 +1927,7 @@ a {
                         i {
                             transition: $transition;
                             color: $white;
+                            z-index: 10;
                         }
                         li {
                             transition: $transition;
@@ -1877,7 +1936,11 @@ a {
                     }
                     li {
                         transition: $transition;
-                        display: none;
+                        display: initial;
+                        margin: 0.6rem;
+                        transform: translateX(0);
+                        font-size: initial;
+                        color: $white-grey - #666;
                         padding-left: 0;
                     }
                 }
@@ -1929,13 +1992,23 @@ a {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            
             li {
                 list-style: none;
-                margin: 0.6rem;
+                margin: 0.0rem;
                 border-radius: 7px;
                 cursor: pointer;
-                display: none;
+                display: initial;
+                transform: translateX(-100rem);
+                
+                font-size: 0;
+                color: transparent;
                 transition: $transition;
+                position: relative;
+                right: 0;
+                
+                
+
             }
             i {
                 transition: $transition;
@@ -2029,9 +2102,12 @@ a {
             align-items: center;
             justify-content: center;
             margin: 0.2rem;
+            transition: $transition;
+            border: solid 3px transparent;
+            border-radius: $navbar-roundness;
             &:hover {
-                background: $dark + #222;
-                border-radius: 6px;
+                background: $dark - #111;
+                border-bottom: solid $navbar-thickness $navbar-highlight-theme-color;
             }
         }
     }

@@ -1,16 +1,26 @@
 @charset "UTF-8";
-*::-webkit-scrollbar-track {
-  background: #fff;
-}
+/* Hello there! Thank you for using FLOW Webtools. First, before you get started, we have to set up your color theme. Adjust colours, transitions, parameters, etc. here to your likings.
 
-*::-webkit-scrollbar-thumb {
-  background: rgba(51, 51, 51, 0.7);
-  border-radius: 20px;
-  height: 20px;
-  border: 3px #fff solid;
-  transition: 0.2s cubic-bezier(0.98, 0.01, 0.54, 1);
-}
+Now, FLOW comes with 2 main styles: dark and light.
 
+Dark is set by default.
+
+To change the style, you have to either
+
+a - comment out the light/dark mode variables so that only the desired style's variables are being used.
+
+or
+
+b - duplicate this file and name one file dark, and the other light.
+In each file, comment out the light/dark mode variables so that only the desired style's variables are being used.
+
+
+
+Now, some things have to have their style manually set through classes applied to the element, such as vnav bars and topbars. This is for customisation purposes.
+
+Lastly, if you are using topbar, configure your highlight colour and thickness below.
+(hover style for links on the topbar)
+*/
 *::-webkit-scrollbar-track {
   background: #222;
 }
@@ -2008,6 +2018,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
 }
 
 .vnav-content .vnav:hover {
@@ -2021,6 +2032,7 @@ a:hover {
 .vnav-content .vnav:hover div div:hover i {
   transition: all 300ms ease-in-out;
   color: #fff;
+  z-index: 10;
 }
 
 .vnav-content .vnav:hover div div:hover li {
@@ -2031,6 +2043,10 @@ a:hover {
 .vnav-content .vnav:hover div div li {
   transition: all 300ms ease-in-out;
   display: initial;
+  margin: 0.6rem;
+  transform: translateX(0);
+  font-size: initial;
+  color: #999999;
   padding-left: 0;
 }
 
@@ -2088,11 +2104,16 @@ a:hover {
 
 .vnav-content .vnav .main li, .vnav-content .vnav .end li {
   list-style: none;
-  margin: 0.6rem;
+  margin: 0.0rem;
   border-radius: 7px;
   cursor: pointer;
-  display: none;
+  display: initial;
+  transform: translateX(-100rem);
+  font-size: 0;
+  color: transparent;
   transition: all 300ms ease-in-out;
+  position: relative;
+  right: 0;
 }
 
 .vnav-content .vnav .main i, .vnav-content .vnav .end i {
@@ -2109,6 +2130,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
 }
 
 .vnav-content .vnav.no-expand:hover {
@@ -2122,6 +2144,7 @@ a:hover {
 .vnav-content .vnav.no-expand:hover div div:hover i {
   transition: all 300ms ease-in-out;
   color: #fff;
+  z-index: 10;
 }
 
 .vnav-content .vnav.no-expand:hover div div:hover li {
@@ -2131,7 +2154,11 @@ a:hover {
 
 .vnav-content .vnav.no-expand:hover div div li {
   transition: all 300ms ease-in-out;
-  display: none;
+  display: initial;
+  margin: 0.6rem;
+  transform: translateX(0);
+  font-size: initial;
+  color: #777777;
   padding-left: 0;
 }
 
@@ -2189,11 +2216,16 @@ a:hover {
 
 .vnav-content .vnav.no-expand .main li, .vnav-content .vnav.no-expand .end li {
   list-style: none;
-  margin: 0.6rem;
+  margin: 0.0rem;
   border-radius: 7px;
   cursor: pointer;
-  display: none;
+  display: initial;
+  transform: translateX(-100rem);
+  font-size: 0;
+  color: transparent;
   transition: all 300ms ease-in-out;
+  position: relative;
+  right: 0;
 }
 
 .vnav-content .vnav.no-expand .main i, .vnav-content .vnav.no-expand .end i {
@@ -2292,11 +2324,14 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin: 0.2rem;
+  transition: all 300ms ease-in-out;
+  border: solid 3px transparent;
+  border-radius: 3rem;
 }
 
 .topbar .right li:hover {
-  background: #555555;
-  border-radius: 6px;
+  background: #222222;
+  border-bottom: solid 3px #ffffff;
 }
 
 .topbar .left, .topbar .right {
