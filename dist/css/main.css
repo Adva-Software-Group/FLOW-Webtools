@@ -20,6 +20,8 @@ Now, some things have to have their style manually set through classes applied t
 
 Lastly, if you are using topbar, configure your highlight colour and thickness below.
 (hover style for links on the topbar)
+
+!!!!! (If you are viewing this on a CSS Stylesheet, customisation is very hard to do. Use a sass file instead.) !!!!!
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&amp;display=swap");
 *::-webkit-scrollbar-track {
