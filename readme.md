@@ -18,6 +18,10 @@ There is also a SASS version of Flow -
 
 The sass version is the recommended version as it allows for extended customisation of styles.
 
+
+To install, simply download and install Flow Webtools and put one or more of the css/sass files into your project and voila!
+
+For JS files, simply move or copy them and link them into your project.
 #
 
 
