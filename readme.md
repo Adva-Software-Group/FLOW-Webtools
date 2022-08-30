@@ -41,7 +41,7 @@ You can redistribute these documents, crediting the authors, however you cannot 
 
 
 ## Notice - Font 'Montserrat'
-The font Montserrat included in this set of documents was not created by me, but by
+The font Montserrat included in this set of documents is by
 ```
 Julieta Ulanovsky
 Sol Matas
