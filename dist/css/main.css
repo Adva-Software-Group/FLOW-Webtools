@@ -321,7 +321,7 @@ body {
 }
 
 .inline {
-  display: inline;
+  display: inline !important;
 }
 
 .flex {
@@ -342,6 +342,18 @@ body {
 
 .flex-align-flex-end {
   align-items: flex-end;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-flex-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-flex-end {
+  justify-content: flex-end;
 }
 
 .grid {

@@ -361,11 +361,12 @@ body {
 }
 
 .inline {
-    display: inline;
+    display: inline !important;
 }
 .flex {
     display: flex;
 }
+
 .flex-column {
     flex-direction: column;
 }
@@ -377,6 +378,15 @@ body {
 }
 .flex-align-flex-end {
     align-items: flex-end;
+}
+.flex-justify-center {
+    justify-content: center;
+}
+.flex-justify-flex-start {
+    justify-content: flex-start;
+}
+.flex-justify-flex-end {
+    justify-content: flex-end;
 }
 .grid {
     display: grid;
