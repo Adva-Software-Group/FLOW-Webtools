@@ -6,6 +6,9 @@ What to expect when contributing to the Flow-Webtools repo -
 - Ask permission or advice from me, Advait-Nair, if you are unsure about whether to do something
 - Have fun!
 
+# Getting Access
+Ask me for access if you are interested in contributing to this project.
+
 ## Contributions are welcome
 
 You can contribute through forking and developing on branches other than main. You can ask me to merge your brach later by opening a **pull request**.
